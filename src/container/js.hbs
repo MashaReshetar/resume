@@ -1,0 +1,131 @@
+<div>
+    <main>
+        <section>
+            <h1><span class="badge bg-secondary">{{name}}</span></h1>
+            <p>{{description}}</p>
+            <b>History</b>
+            <ul>
+                {{#with history}}
+                    <li><em>Year:</em> {{year}}</li>
+                    <li><em>Founder:</em> {{founder}}</li>
+                {{/with}}
+            </ul>
+
+            <hr>
+
+            <div>
+                <p><strong>Types:</strong></p>
+
+                {{#each types}}
+                    <ul class="list-group">
+                        <li class="list-group-item">{{this}}</li>
+                    </ul>
+                    {{/each}}
+                </div>
+
+                <br>
+
+                <div>
+                    <p><strong>Syntax:</strong></p>
+
+                    {{#with syntax}}
+                        <ul>
+                        {{#with variables}}
+                            <li>
+                                <p><em>Variables:</em> </p>
+                                {{this}}  
+                            </li>
+                        {{/with}}
+
+                        <br>
+
+                        {{#with functions}}
+                            <li>
+                                <p><em>Functions:</em> </p>
+                                {{this}} 
+                            </li>
+                        {{/with}}
+
+                        <br>
+
+                        {{#with conditionals}}
+                            <li>
+                                <p><em>Conditionals:</em> </p>
+                                {{this}}  
+                            </li>
+                        {{/with}}
+
+                        <br>
+
+                        {{#with loops}}
+                            <li>
+                                <p><em>Loops:</em> </p>
+                                {{this}}  
+                            </li>
+                        {{/with}}
+
+                        <br>
+
+                        {{#with classes}}
+                            <li>
+                                <p><em>Classes:</em> </p>
+                                {{this}}  
+                            </li>
+                        {{/with}}
+
+                        </ul>
+                    {{/with}}
+                </div>
+
+                <br>
+
+                <div>
+                    <p><strong>Features:</strong></p>
+
+                    {{#each features}}
+                        <ul class="list-group">
+                            <li class="list-group-item">{{this}}</li>
+                        </ul>
+                    {{/each}}
+                </div>
+
+                <br>
+
+                <div>
+                    <p><strong>Libraries:</strong></p>
+
+                    {{#each libraries}}
+                        <ul>
+                            <li>{{this}}</li>
+                        </ul>
+                    {{/each}}
+                </div>
+
+                <br>
+
+                <div>
+                    <p><strong>Tools:</strong></p>
+
+                    {{#each tools}}
+                        <ul>
+                            <li>{{this}}</li>
+                        </ul>
+                    {{/each}}
+                </div>
+
+                <br>
+
+                <div>
+                    <p><strong>Community:</strong></p>
+
+                        {{#each community}}
+                            <ul>
+                                <li><button type="button" class="btn btn-link">{{this.name}}</button></li>
+                                <p><em>Type:</em> {{this.type}}</p>
+                            </ul>
+                    {{/each}}
+                </div>
+        </section>
+    </main> 
+</div>
+ 

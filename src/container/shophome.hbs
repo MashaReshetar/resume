@@ -47,16 +47,18 @@
                     {{#each tabs}}
                         {{#if isActive includeZero=true}}
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">{{isActive}}</a>
+                                <a class="nav-link active" href="#">{{text}}</a>
                             </li>
-                        {{/if}}
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">{{text}}</a>
-                        </li>
-                        {{#if isDisabled includeZero=true}}
-                            <li class="nav-item">
-                                <a class="nav-link disabled">{{isDisabled}}</a>
-                            </li>
+                            {{else}}
+                              {{#if isDisabled includeZero=true}}
+                                <li class="nav-item">
+                                    <a class="nav-link disabled">{{text}}</a>
+                                </li>
+                                {{else}}
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">{{text}}</a>
+                                    </li>
+                                {{/if}}
                         {{/if}}
                     {{/each}}
                 </ul>

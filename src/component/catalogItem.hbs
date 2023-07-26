@@ -1,0 +1,48 @@
+{{#each goodsList}}
+    <div class="col-6">
+        <div class="card mb-4">
+            <img src="{{img}}" class="card-img-top">
+                <div class="card-body">
+                    <div>
+                        {{#if isHot includeZero=true}}
+                            <span class="badge rounded-pill bg-warning">{{isHot}}</span>
+                        {{/if}} 
+                        {{#if isNew includeZero=true}}
+                            <span class="badge rounded-pill bg-primary">{{isNew}}</span>
+                        {{/if}}
+                            <div class="my-1">
+                                {{#if isFast includeZero=true}}
+                                    <span class="badge rounded-pill text-bg-success">{{isFast}}</span>
+                                {{/if}}  
+                                {{#if isFree includeZero=true}}
+                                    <span class="badge rounded-pill text-bg-secondary">{{isFree}}</span>
+                                {{/if}}
+                            </div>
+                    </div>
+                    <h5 class="card-title">{{name}}</h5>
+                        {{#with review}}
+                            <p class="card-text">{{amount}} {{text}}</p>
+                        {{/with}}
+                    <h5>{{price}}</h5>
+                    <p>{{delivery}}</p>
+                    {{#each buttons}}
+                        <div class="col mb-2">
+                            {{#if isPrimary includeZero=true}}
+                                <button type="button" class="btn btn-primary">{{this.text}}</button>
+                                {{else}}
+                                {{#if isSecondary includeZero=true}}
+                                    <button type="button" class="btn btn-secondary">{{this.text}}</button>
+                                {{/if}}
+                                {{/if}}
+                        </div>
+                    {{/each}}
+
+                    {{#each characteristics}}
+                        <ul>
+                            <li>{{title}}: {{value}}</li>
+                        </ul>
+                    {{/each}}
+                </div>
+        </div>
+    </div>
+{{/each}}

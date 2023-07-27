@@ -10,14 +10,11 @@
                     {{address.city}} {{address.state}} {{address.country}}
                 </em>
 
-                <br>
-                <br>
                 <hr>
             </section>
 
             <section>
-
-            {{> title data="Education" big=true}}
+                {{> title data="Education" big=true}}
                 <ul>
                     {{#each education}}
                         <li>
@@ -27,7 +24,6 @@
                         </li>
                     {{/each}}
                 </ul>
-                <br>
                 <hr>
             </section>
 
@@ -40,12 +36,12 @@
                        <strong>{{title}}</strong> 
                     </li>
                     <p>{{startDate}} - {{endDate}}</p>
-                    <ul>
+                    <ul class="mb-3">
                         {{#each responsibilities}}
                             <li>{{this}}</li>
                         {{/each}}
                     </ul>
-                    <br>
+                    
                     <b>{{company}} {{industry}} ({{year_founded}})</b>
 
                     <div>
@@ -63,7 +59,6 @@
                                         <li><b>{{name}} ({{status}})</b></li>
                                         <p>{{description}}</p>
                                     </ul>
-                                
                                 <div>
                                 {{#each teams}}
                                     <strong>Teams:</strong>
@@ -95,17 +90,14 @@
                                                     <p>{{email}}</p>
                                                 </ul>
 
-                                                <ul>
+                                                <ul class="mb-3">
                                                     <strong>Skills</strong>
                                                     {{#each skills}}
-                                                    <li>{{this}}</li>
+                                                        <li>{{this}}</li>
                                                     {{/each}}
                                                 </ul>
 
-                                                <br>
-                                                <br>
-
-                                                <ul>
+                                                <ul class="my-4">
                                                     <strong>Projects:</strong>
                                                     {{#each projects}}
                                                     <li>{{name}}</li>
@@ -114,9 +106,6 @@
                                                         <li>{{this}}</li>
                                                         {{/each}}
                                                     </ul>
-
-                                                    <br>
-                                                    <br>
 
                                                     <ul>
                                                         <strong>Team members:</strong>

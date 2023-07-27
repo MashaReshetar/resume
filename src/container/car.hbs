@@ -6,21 +6,19 @@
             <p><em>Year:</em> {{year}}</p>
             <p><em>Color:</em> {{color}}</p>
 
-            <hr>
+        <hr>
 
-            <div>
-                <h2><span class="badge bg-secondary">Features</span></h2>
+        <div>
+            <h2><span class="badge bg-secondary">Features</span></h2>
 
-                {{#with features}}
+            {{#with features}}
 
-                    {{#with interior}}
-                        <b><u>Interior</u></b>
-
-                        <br> <br>
-
+                {{#with interior}}
+                    <p class="mb-3"><b><u>Interior</u></b></p>
+                    
+                    <div class="mb-4">
                         {{#with seats}}
-
-                            <p><b>Seats</b></p>
+                        <p><b>Seats</b></p>
                             <ul class="list-group">
                                 <li class="list-group-item"><em>Material:</em> {{material}}</li>
                                 <li class="list-group-item"><em>Color:</em> {{color}}</li>
@@ -36,21 +34,15 @@
                                 </li>
                             </ul>
                         {{/with}}
-
-                        <br> 
+                    </div>
 
                         {{#with dashboard}}
-
                             <p><b>Dashboard</b></p>
-
                             <ul>
                                 <li><em>Material:</em> {{material}}</li>
                                 <li><em>Color:</em> {{color}}</li>
-
-                                <br>
-
                                 <ul>
-                                    <p><b>Display</b></p>
+                                    <p class="mt-4"><b>Display</b></p>
                                     {{#with display}}
                                     <li><em>Type:</em> {{type}}</li>
                                     <li><em>Size:</em> {{size}}</li>
@@ -92,9 +84,7 @@
                     <hr>
 
                     {{#with exterior}}
-
-                        <b><u>Exterior</u></b>
-                        <br><br>
+                        <p class="mb-3"><b><u>Exterior</u></b></p>
 
                         {{#with wheels}}
                             <p><b>Wheels</b></p>
@@ -138,8 +128,7 @@
                     <hr>
 
                     {{#with safety}}
-                        <b><u>Safety</u></b>
-                        <br><br>
+                        <p class="mb-3"><b><u>Safety</u></b></p>
 
                         {{#with airbags}}
                             <p><b>Airbags</b></p>
@@ -149,39 +138,38 @@
                             <li><em>Rear:</em> {{rear}}</li>
                         {{/with}}
 
-                        <br>
-
-                        {{#with assistance}}
-
-                            <p><b>Assistance</b></p>
-                            <ul class="list-group">
-                                <li class="list-group-item"><em>Blind spot monitoring:</em> 
-                                    {{#if blind_spot_monitoring includeZero=true}}
-                                        {{blind_spot_monitoring}}
-                                     {{/if}}
-                                </li>
-                                <li class="list-group-item"><em>Rear cross traffic alert:</em>
-                                    {{#if rear_cross_traffic_alert includeZero=true}}
-                                        {{rear_cross_traffic_alert}}
-                                     {{/if}}
-                                </li>
-                                <li class="list-group-item"><em>Lane departure warning:</em> 
-                                    {{#if lane_departure_warning includeZero=true}}
-                                        {{lane_departure_warning}}
-                                     {{/if}}
-                                </li>
-                                    <li class="list-group-item"><em>Adaptive cruise control:</em> 
-                                    {{#if adaptive_cruise_control includeZero=true}}
-                                        {{adaptive_cruise_control}}
-                                     {{/if}}
-                                </li>
-                                    <li class="list-group-item"><em>Collision warning:</em> 
-                                    {{#if collision_warning includeZero=true}}
-                                        {{collision_warning}}
-                                     {{/if}}
-                                </li>
-                            </ul>
-                        {{/with}}
+                        <div class="mt-3">
+                            {{#with assistance}}
+                                <p><b>Assistance</b></p>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><em>Blind spot monitoring:</em> 
+                                        {{#if blind_spot_monitoring includeZero=true}}
+                                            {{blind_spot_monitoring}}
+                                        {{/if}}
+                                    </li>
+                                    <li class="list-group-item"><em>Rear cross traffic alert:</em>
+                                        {{#if rear_cross_traffic_alert includeZero=true}}
+                                            {{rear_cross_traffic_alert}}
+                                        {{/if}}
+                                    </li>
+                                    <li class="list-group-item"><em>Lane departure warning:</em> 
+                                        {{#if lane_departure_warning includeZero=true}}
+                                            {{lane_departure_warning}}
+                                        {{/if}}
+                                    </li>
+                                        <li class="list-group-item"><em>Adaptive cruise control:</em> 
+                                        {{#if adaptive_cruise_control includeZero=true}}
+                                            {{adaptive_cruise_control}}
+                                        {{/if}}
+                                    </li>
+                                        <li class="list-group-item"><em>Collision warning:</em> 
+                                        {{#if collision_warning includeZero=true}}
+                                            {{collision_warning}}
+                                        {{/if}}
+                                    </li>
+                                </ul>
+                            {{/with}}
+                        </div>
                     {{/with}}
                 {{/with}}
             </div>
@@ -219,11 +207,10 @@
                 <p><b>Price</b></p>
                 <ul>
                     <li><em>Base:</em> {{base}}</li>
-                    <li><em>Destination:</em> {{destination}}</li>
+                    <li><em>Destination:</em> {{destination}}</li>  
 
-                    <br>    
-
-                    {{#with options}}
+                    <div class="my-4">
+                        {{#with options}}
                         <p><b>Options</b></p>
                         <ul>
                             <li><em>Navigation:</em> {{navigation}}</li>
@@ -231,14 +218,11 @@
                             <li><em>Premium paint:</em> {{premium_paint}}</li>
                         </ul>
                     {{/with}}
-                    
-                    <br>
+                    </div>
                     
                     <li><em>Total:</em> {{total}}</li>
                 <ul>
-
             {{/with}}
-        
         </section>
     </main> 
 </div>

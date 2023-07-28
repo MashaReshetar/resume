@@ -3348,5 +3348,16 @@ router.get('/shopcatalog', function (req, res) {
 
 // ================================================================
 
+//              ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/selector', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('selector', {
+    // ↙ сюди вводимо JSON дані
+    layout: 'basic',
+  })
+})
+
+// ===================================================
+
 // Підключаємо роутер до бек-енду
 module.exports = router
